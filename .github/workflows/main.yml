@@ -28,7 +28,7 @@ jobs:
         run: |
           git fetch origin main
           git checkout main
-          git merge sohang-update --no-ff --commit -m "Auto-merge from sohang-update to main"
+          git merge origin/sohang-update --allow-unrelated-histories --no-ff -m "Auto-merge from sohang-update to main"
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
