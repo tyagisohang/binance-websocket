@@ -14,6 +14,9 @@ jobs:
         with:
           ref: sohang-update
           fetch-depth: 0
+      - uses: actions/checkout@v4
+      - run: composer install
+      - run: php artisan test
 
       - name: Configure Git
         run: |
